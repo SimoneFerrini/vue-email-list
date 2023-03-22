@@ -13,7 +13,8 @@
         <div id="app">
             <h1>Lista Email :</h1>
             <ul>
-                <li v-for="mail in mailList">
+                <li v-if="mailList.length < 10"> Loading...</li>
+                <li v-for="mail in mailList" v-else>
                     {{mail}}
                 </li>
             </ul>
